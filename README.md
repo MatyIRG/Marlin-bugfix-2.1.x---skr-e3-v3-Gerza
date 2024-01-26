@@ -39,7 +39,7 @@ There are some speed changes that i won't write here
 - #define Y_MIN_POS -5
 
 &nbsp;
-Bl touch work as servo, so for a lot of people it doesn't work becouse they don't have this information.
+Bl touch work as servo, so for a lot of people it doesn't work because they don't have this information.
 
 - #define NUM_SERVOS 1 //
 - #define SERVO_DELAY { 300 }
@@ -58,6 +58,9 @@ Bl touch work as servo, so for a lot of people it doesn't work becouse they don'
 - #define PRINTCOUNTER // why not
 - #define FAN_SOFT_PWM
 - #define FAN_SOFT_PWM
+
+## configuration_adv.h changes
+
 
 ## Marlin 2.1 Bugfix Branch
 
