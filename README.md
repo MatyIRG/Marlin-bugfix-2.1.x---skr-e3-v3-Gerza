@@ -32,7 +32,7 @@ For correct functioning you should plug 3D touch/BL touch as this diagram. It ca
 
 Bl touch work as servo, so for a lot of people it doesn't work becouse they don't have this information.
 
-__configuration.h changes__
+# configuration.h changes
 There are some speed changes that i won't write here
 #define USE_PROBE_FOR_Z_HOMING
 #define BLTOUCH
@@ -44,9 +44,13 @@ There are some speed changes that i won't write here
 #define AUTO_BED_LEVELING_BILINEAR
 #define RESTORE_LEVELING_AFTER_G28
 #define LCD_BED_LEVELING
-#define LCD_BED_TRAMMING // it moves nozzle above the springs
- 
+#define LCD_BED_TRAMMING // it moves nozzle above the springs so you can make bed really flat
+#define Z_SAFE_HOMING
+#define NOZZLE_PARK_FEATURE // pause function won't stop at the 3d print, but away from it
 
+
+#define PRINTCOUNTER // why not
+#define FAN_SOFT_PWM
 
 ## Marlin 2.1 Bugfix Branch
 
