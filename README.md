@@ -22,12 +22,24 @@ Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
 - #define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // tell how far is bltouch from the nozzle
 
 ## Features
+- BL touch
+- bed tramming
+- 
 
 
-
-## BL touch 
-- For correct functioning you should plug 3D touch/BL touch as this diagram. It can work with connecting everything in Z-Probe pins, but I haven't test it yet. It works for now.
+## Motherboard connections
+- For correct functioning you should plug 3D touch/BL touch as this diagram.
+- Connecting everything in Z-Probe pins won't work with this configuration. I tried few thing but unsuccessfully.
+__DON'T FORGET TO UNPLUG Z-DIAG JUMPER__
 <p align="center"> <img src="bl_touch.png"> </p>
+
+&nbsp;
+For a long time I could understand which fan pin use what. Here it is:
+- FAN0 - used for cooling the print (most of the time the side fan)
+- FAN1 - used for cooling the extruder (front fan that cools the hotend)
+- FAN2 - used for cooling the controller (fan cooling the motherboard)
+
+
 
 ## configuration.h changes
 There are some speed changes that i won't write here
@@ -47,12 +59,14 @@ Bl touch work as servo, so for a lot of people it doesn't work because they don'
 &nbsp;
 - #define AUTO_BED_LEVELING_BILINEAR
 - #define RESTORE_LEVELING_AFTER_G28
+- #define GRID_MAX_POINTS_X 5 // it makes mesh map of 5x5 - 25 points of probing
 - #define LCD_BED_LEVELING
 - #define LCD_BED_TRAMMING // it moves nozzle above the springs so you can make bed really flat
 
 &nbsp;
 - #define Z_SAFE_HOMING
 - #define NOZZLE_PARK_FEATURE // pause function won't stop at the 3d print, but away from it
+#define INVERT_E0_DIR true // for skr is need to be true even for geared extruder
 
 &nbsp;
 - #define PRINTCOUNTER // why not
