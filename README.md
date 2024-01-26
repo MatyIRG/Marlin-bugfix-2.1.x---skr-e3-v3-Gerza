@@ -19,27 +19,36 @@ Please test this firmware and let us know if it misbehaves in any way. Volunteer
 It is build for https://www.thingiverse.com/thing:3856703
 Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
 
-For this build are used these parametrs:
 #define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // tell how far is bltouch from the nozzle
 
 ## Features
 
 
 
-# BLtouch 
+# BL touch 
 For correct functioning you should plug 3D touch/BL touch as this diagram. It can work with connecting everything in Z-Probe pins, but I haven't test it yet. It works for now.
 <p align="center"> <img src="bl_touch.png"> </p>
-
-Bl touch work as servo, so for a lot of people it doesn't work becouse they don't have this information.
 
 # configuration.h changes
 There are some speed changes that i won't write here
 #define USE_PROBE_FOR_Z_HOMING
+
 #define BLTOUCH
+
 #define Z_PROBE_SERVO_NR 0
+
 #define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // 
+
 #define PROBING_MARGIN 25 // the bigger number the further away from the edges
+
 #define Y_MIN_POS -5
+
+Bl touch work as servo, so for a lot of people it doesn't work becouse they don't have this information.
+
+#define NUM_SERVOS 1 //
+
+#define SERVO_DELAY { 300 }
+
 
 #define AUTO_BED_LEVELING_BILINEAR
 #define RESTORE_LEVELING_AFTER_G28
@@ -50,6 +59,7 @@ There are some speed changes that i won't write here
 
 
 #define PRINTCOUNTER // why not
+#define FAN_SOFT_PWM
 #define FAN_SOFT_PWM
 
 ## Marlin 2.1 Bugfix Branch
