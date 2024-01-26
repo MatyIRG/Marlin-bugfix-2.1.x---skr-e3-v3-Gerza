@@ -18,8 +18,8 @@ Please test this firmware and let us know if it misbehaves in any way. Volunteer
 ### Configuration For Custom Ender 3
 It is build for https://www.thingiverse.com/thing:3856703
 Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
-
-#define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // tell how far is bltouch from the nozzle
+&nbsp;
+- #define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // tell how far is bltouch from the nozzle
 
 ## Features
 
@@ -32,29 +32,29 @@ Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
 ## configuration.h changes
 There are some speed changes that i won't write here
 - #define USE_PROBE_FOR_Z_HOMING
-
 - #define BLTOUCH
 - #define Z_PROBE_SERVO_NR 0
 - #define NOZZLE_TO_PROBE_OFFSET { 32, -2, 0 } // 
 - #define PROBING_MARGIN 25 // the bigger number the further away from the edges
 - #define Y_MIN_POS -5
 
+&nbsp;
 Bl touch work as servo, so for a lot of people it doesn't work becouse they don't have this information.
 
 - #define NUM_SERVOS 1 //
 - #define SERVO_DELAY { 300 }
 
-
+&nbsp;
 - #define AUTO_BED_LEVELING_BILINEAR
-
 - #define RESTORE_LEVELING_AFTER_G28
 - #define LCD_BED_LEVELING
 - #define LCD_BED_TRAMMING // it moves nozzle above the springs so you can make bed really flat
 
+&nbsp;
 - #define Z_SAFE_HOMING
 - #define NOZZLE_PARK_FEATURE // pause function won't stop at the 3d print, but away from it
 
-
+&nbsp;
 - #define PRINTCOUNTER // why not
 - #define FAN_SOFT_PWM
 - #define FAN_SOFT_PWM
