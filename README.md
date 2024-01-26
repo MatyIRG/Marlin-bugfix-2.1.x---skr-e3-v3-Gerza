@@ -30,7 +30,7 @@ Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
 ## Motherboard connections
 - For correct functioning you should plug 3D touch/BL touch as this diagram.
 - Connecting everything in Z-Probe pins won't work with this configuration. I tried few thing but unsuccessfully.
-__DON'T FORGET TO UNPLUG Z-DIAG JUMPER__
+- __DON'T FORGET TO UNPLUG Z-DIAG JUMPER__
 <p align="center"> <img src="bl_touch.png"> </p>
 
 &nbsp;
