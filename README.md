@@ -25,11 +25,11 @@ Direct Drive - BMG + E3D V6 + BLTOUCH + SKR MINI E3 V3
 
 
 
-# BL touch 
+## BL touch 
 For correct functioning you should plug 3D touch/BL touch as this diagram. It can work with connecting everything in Z-Probe pins, but I haven't test it yet. It works for now.
 <p align="center"> <img src="bl_touch.png"> </p>
 
-# configuration.h changes
+## configuration.h changes
 There are some speed changes that i won't write here
 #define USE_PROBE_FOR_Z_HOMING
 
@@ -51,15 +51,22 @@ Bl touch work as servo, so for a lot of people it doesn't work becouse they don'
 
 
 #define AUTO_BED_LEVELING_BILINEAR
+
 #define RESTORE_LEVELING_AFTER_G28
+
 #define LCD_BED_LEVELING
+
 #define LCD_BED_TRAMMING // it moves nozzle above the springs so you can make bed really flat
+
 #define Z_SAFE_HOMING
+
 #define NOZZLE_PARK_FEATURE // pause function won't stop at the 3d print, but away from it
 
 
 #define PRINTCOUNTER // why not
+
 #define FAN_SOFT_PWM
+
 #define FAN_SOFT_PWM
 
 ## Marlin 2.1 Bugfix Branch
@@ -72,9 +79,6 @@ This branch is for patches to the latest 2.1.x release version. Periodically thi
 
 Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
 
-## Example Configurations
-
-Before you can build Marlin for your machine you'll need a configuration for your specific hardware. Upon request, your vendor will be happy to provide you with the complete source code and configurations for your machine, but you'll need to get updated configuration files if you want to install a newer version of Marlin. Fortunately, Marlin users have contributed dozens of tested configurations to get you started. Visit the [MarlinFirmware/Configurations](https://github.com/MarlinFirmware/Configurations) repository to find the right configuration for your hardware.
 
 ## Building Marlin 2.1
 
